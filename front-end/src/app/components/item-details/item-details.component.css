@@ -1,0 +1,17 @@
+table {
+  width: 100%;
+}
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 100px;
+}
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}

@@ -1,0 +1,26 @@
+<div class="host">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+ 
+      <ng-container matColumnDef="name" style="align-items: center">
+        <th mat-header-cell *matHeaderCellDef >Item Name</th>
+        <td mat-cell *matCellDef="let element" (click)="$event.stopPropagation()">
+            <a mat-button style="align-items: center" (click)='showDetails(element);' >{{ element.name }}</a> 
+       </td>
+      </ng-container>
+
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef style="padding-left: 100px;">Item Price</th>
+        <td mat-cell *matCellDef="let element"  style="padding-left: 100px; align-items: center">{{ element.price }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef style="padding-left: 100px; align-items: center"> Delete </th>
+        <td mat-cell *matCellDef="let element" (click)="$event.stopPropagation()">
+             <button mat-raised-button color="warn" style="margin-left: 100px; align-items: center" (click)='delete(element);' >Delete</button> 
+        </td>
+      </ng-container>
+ 
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>

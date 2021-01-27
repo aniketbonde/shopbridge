@@ -1,0 +1,9 @@
+Kindly follow below steps after checkout from GitHub.
+
+1.	Make sure Nodejs and Java 8 is installed on system.
+2.	I have made folder as frontend and backend for clarity. So, open the workspace ex. Frontend in visual studio and import as maven project in eclipse/sts.
+Front End
+Run npm install in front-end project.
+And ng serve –o
+Back End 
+Update maven dependency and run as spring boot application.

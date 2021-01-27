@@ -1,0 +1,24 @@
+<div class="card-container">
+  <a class="card" (click)="assignComponent('add')">
+    <span>Add Item</span>
+  </a>
+
+  <a class="card" (click)="assignComponent('list')">
+    <span>List Items</span>
+  </a>
+
+</div>
+<router-outlet></router-outlet>
+<!-- <div>
+  <ng-container *ngComponentOutlet="dynamicComponent"></ng-container>
+</div> -->
+<br />
+<button
+  [disabled]="disableGoBackBtn()"
+  mat-raised-button
+  color="warn"
+  (click)="onGoBackClick()"
+  style="margin-left: 700px; align-items: center"
+>
+  Go back to list
+</button>
